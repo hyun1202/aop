@@ -89,4 +89,39 @@ public class ExecutionTest {
         Method internalMethod = MemberServiceImpl.class.getMethod("internal", String.class);
         Assertions.assertThat(pointcut.matches(internalMethod, MemberServiceImpl.class)).isFalse();
     }
+
+    // 파라미터는 String 형식
+    @Test
+    void argsMatch() {
+        pointcut.setExpression("execution(* *(String))");
+        Assertions.assertThat(pointcut.matches(helloMethod, MemberServiceImpl.class)).isTrue();
+    }
+
+    // 파라미터가 없어야함
+    @Test
+    void argsMatchNoArgs() {
+        pointcut.setExpression("execution(* *())");
+        Assertions.assertThat(pointcut.matches(helloMethod, MemberServiceImpl.class)).isFalse();
+    }
+
+    // 정확히 하나의 파라미터 허용, 모든 타입 허용
+    @Test
+    void argsMatchStar() {
+        pointcut.setExpression("execution(* *(*))");
+        Assertions.assertThat(pointcut.matches(helloMethod, MemberServiceImpl.class)).isTrue();
+    }
+
+    // 숫자와 무관한 모든 파라미터, 모든 타입 허용
+    @Test
+    void argsMatchAll() {
+        pointcut.setExpression("execution(* *(..))");
+        Assertions.assertThat(pointcut.matches(helloMethod, MemberServiceImpl.class)).isTrue();
+    }
+
+    // String 타입으로 시작, 숫자와 무관한 모든 파라미터, 모든 타입 허용
+    @Test
+    void argsMatchComplex() {
+        pointcut.setExpression("execution(* *(String, ..))");
+        Assertions.assertThat(pointcut.matches(helloMethod, MemberServiceImpl.class)).isTrue();
+    }
 }

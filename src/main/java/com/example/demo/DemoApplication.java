@@ -1,8 +1,11 @@
 package com.example.demo;
 
+import com.example.demo.exam.aop.TraceAspect;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Import;
 
+@Import(TraceAspect.class)
 @SpringBootApplication
 public class DemoApplication {
 

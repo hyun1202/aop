@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
-@Import({RetryAspect.class, TraceAspect.class})
+//@Import({RetryAspect.class, TraceAspect.class})
 @SpringBootApplication
 public class DemoApplication {
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.WordMapper">
+
+    <select id="findByUserAndWordBook" resultType="Word">
+        SELECT word_id, word, mean, word_book_id, user_id
+        FROM numodb.word
+        WHERE user_id = #{userId}
+          AND word_book_id = #{wordBookId}
+        LIMIT 1
+    </select>
+
+</mapper>

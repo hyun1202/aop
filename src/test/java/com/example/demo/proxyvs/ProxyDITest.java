@@ -1,11 +1,10 @@
 package com.example.demo.proxyvs;
 
-import com.example.demo.member.MemberService;
-import com.example.demo.member.MemberServiceImpl;
+import com.example.springAdv.member.MemberService;
+import com.example.springAdv.member.MemberServiceImpl;
 import com.example.demo.proxyvs.code.ProxyDIAspect;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;

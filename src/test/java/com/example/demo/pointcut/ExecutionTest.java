@@ -1,6 +1,6 @@
 package com.example.demo.pointcut;
 
-import com.example.demo.member.MemberServiceImpl;
+import com.example.springAdv.member.MemberServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,6 +1,7 @@
 package com.example.demo.internalcall;
 
-import com.example.demo.internalcall.aop.CallLogAspect;
+import com.example.springAdv.internalcall.CallServiceV3;
+import com.example.springAdv.internalcall.aop.CallLogAspect;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

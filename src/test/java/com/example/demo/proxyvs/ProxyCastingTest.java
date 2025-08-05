@@ -1,7 +1,7 @@
 package com.example.demo.proxyvs;
 
-import com.example.demo.member.MemberService;
-import com.example.demo.member.MemberServiceImpl;
+import com.example.springAdv.member.MemberService;
+import com.example.springAdv.member.MemberServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.aop.framework.ProxyFactory;

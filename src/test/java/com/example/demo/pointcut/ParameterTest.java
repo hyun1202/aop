@@ -1,8 +1,8 @@
 package com.example.demo.pointcut;
 
-import com.example.demo.member.MemberService;
-import com.example.demo.member.annotation.ClassAop;
-import com.example.demo.member.annotation.MethodAop;
+import com.example.springAdv.member.MemberService;
+import com.example.springAdv.member.annotation.ClassAop;
+import com.example.springAdv.member.annotation.MethodAop;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;

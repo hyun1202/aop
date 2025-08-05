@@ -1,6 +1,6 @@
 package com.example.demo.pointcut;
 
-import com.example.demo.member.MemberService;
+import com.example.springAdv.member.MemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -28,14 +28,14 @@ public class ThisTargetTest {
     @Aspect
     static class ThisTargetAspect {
         //부모 타입 허용
-        @Around("this(com.example.demo.member.MemberService)")
+        @Around("this(com.example.springAdv.member.MemberService)")
         public Object doThisInterface(ProceedingJoinPoint joinPoint) throws Throwable {
             log.info("[this-interface] {}", joinPoint.getSignature());
             return joinPoint.proceed();
         }
 
         //부모 타입 허용
-        @Around("target(com.example.demo.member.MemberService)")
+        @Around("target(com.example.springAdv.member.MemberService)")
         public Object doTargetInterface(ProceedingJoinPoint joinPoint) throws Throwable {
             log.info("[target-interface] {}", joinPoint.getSignature());
             return joinPoint.proceed();
@@ -44,14 +44,14 @@ public class ThisTargetTest {
         //this: 스프링 AOP 프록시 객체 대상
         //JDK 동적 프록시는 인터페이스를 기반으로 생성되므로 구현 클래스를 알 수 없음
         //CGLIB 프록시는 구현 클래스를 기반으로 생성되므로 구현 클래스를 알 수 있음
-        @Around("this(com.example.demo.member.MemberServiceImpl)")
+        @Around("this(com.example.springAdv.member.MemberServiceImpl)")
         public Object doThis(ProceedingJoinPoint joinPoint) throws Throwable {
             log.info("[this-impl] {}", joinPoint.getSignature());
             return joinPoint.proceed();
         }
 
         //target: 실제 target 객체 대상
-        @Around("target(com.example.demo.member.MemberServiceImpl)")
+        @Around("target(com.example.springAdv.member.MemberServiceImpl)")
         public Object doTarget(ProceedingJoinPoint joinPoint) throws Throwable {
             log.info("[target-impl] {}", joinPoint.getSignature());
             return joinPoint.proceed();

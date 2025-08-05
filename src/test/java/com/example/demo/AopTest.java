@@ -1,8 +1,8 @@
 package com.example.demo;
 
-import com.example.demo.order.OrderRepository;
-import com.example.demo.order.OrderService;
-import com.example.demo.order.aop.*;
+import com.example.springAdv.order.OrderRepository;
+import com.example.springAdv.order.OrderService;
+import com.example.springAdv.order.aop.AspectV6Advice;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -1,10 +1,7 @@
 package com.example.demo;
 
-import com.example.demo.exam.aop.RetryAspect;
-import com.example.demo.exam.aop.TraceAspect;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Import;
 
 //@Import({RetryAspect.class, TraceAspect.class})
 @SpringBootApplication

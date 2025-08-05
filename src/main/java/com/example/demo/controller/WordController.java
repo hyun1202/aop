@@ -20,4 +20,5 @@ public class WordController {
     ) {
         return wordService.findByUserAndWordBook(userId, wordBookId);
     }
+
 }

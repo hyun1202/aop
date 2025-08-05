@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.Word;
 import com.example.demo.mapper.WordMapper;
+import com.example.demo.vo.WordBookVo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,8 @@ import org.springframework.stereotype.Service;
 public class WordService {
     private final WordMapper wordMapper;
 
-    public Word findByUserAndWordBook(Long userId, Long wordBookId) {
-        return wordMapper.findByUserAndWordBook(userId, wordBookId);
+    public WordBookVo findByUserAndWordBook(Long userId, Long wordBookId) {
+        WordBookVo result = wordMapper.findByUserAndWordBook(userId, wordBookId);
+        return result;
     }
 }

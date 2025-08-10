@@ -16,4 +16,4 @@ logging:
     org.apache.ibatis: DEBUG
 
 producer:
-  type: none
+  type: kafka
